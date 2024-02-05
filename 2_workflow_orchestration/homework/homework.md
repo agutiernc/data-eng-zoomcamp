@@ -60,3 +60,23 @@ What are the existing values of `VendorID` in the dataset?
 
 **Answer**
 
+`1 or 2`
+
+
+### Question 5. Data Transformation
+
+How many columns need to be renamed to snake case?
+
+**Answer**
+
+`4`
+
+
+### Question 6. Data Exporting
+
+Once exported, how many partitions (folders) are present in Google Cloud?
+
+**Answer**
+
+`96`
+
