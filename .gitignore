@@ -1,5 +1,4 @@
 *.code-workspace
-*.csv
 *.json
 
 load_data_gcs
