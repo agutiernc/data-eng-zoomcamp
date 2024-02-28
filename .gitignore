@@ -13,3 +13,5 @@ upload-data.ipynb
 extra_notes.txt
 env
 .dlt
+1_data_eng_intro/**/*.csv
+2_workflow_orchestration/**/*.csv
