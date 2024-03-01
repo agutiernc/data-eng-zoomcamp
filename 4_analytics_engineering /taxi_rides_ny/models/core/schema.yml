@@ -127,3 +127,27 @@ models:
       - name: payment_type_description
         data_type: string
         description: ""
+
+  - name: fact_fhv_trips
+    description: >
+      Trips made by For Hire Vehicles. The records were collected and provided to the NYC Taxi and Limousine Commission (TLC) by
+      technology service providers. 
+    columns:
+      - name: tripid
+        description: >
+          Primary key for this table, generated with a concatenation of dispatching_base_num+pickup_datetime+dropoff_datetime
+      - name: dispatching_base_num 
+        description: The TLC Base License Number of the base that dispatched the trip
+      - name: pickup_datetime
+        description: The date and time of the trip pick-up
+      - name: dropoff_datetime 
+        description: The date and time of the trip dropoff
+      - name: pickup_locationid 
+        description: TLC Taxi Zone in which the trip began
+      - name: dropoff_locationid 
+        description: TLC Taxi Zone in which the trip ended
+      - name: SR_Flag
+        description: >
+          Indicates if the trip was a part of a shared ride chain offered by a
+          High Volume FHV company (e.g. Uber Pool, Lyft Line). For shared trips,
+          the value is 1. For non-shared rides, this field is null.
