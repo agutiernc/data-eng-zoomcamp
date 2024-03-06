@@ -25,7 +25,7 @@ You'll need to have completed the ["Build the first dbt models"](https://www.you
 
 **Answer**
 
-`It applies a limit 100 to all of our models`
+`It applies a limit 100 only to our staging models`
 
 ### Question 2: 
 
@@ -33,7 +33,7 @@ You'll need to have completed the ["Build the first dbt models"](https://www.you
 
 **Answer**
 
-`The code that has been merged into the main branch`
+`The code from the development branch we are requesting to merge to main`
 
 ### Question 3 (2 points)
 
@@ -47,7 +47,7 @@ Run the dbt model without limits (is_test_run: false).
 
 **Answer**
 
-``
+`22998722`
 
 ### Question 4 (2 points)
 
@@ -57,4 +57,4 @@ Create a dashboard with some tiles that you find interesting to explore the data
 
 **Answer**
 
-``
+`Yellow`

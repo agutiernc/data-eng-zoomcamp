@@ -1,5 +1,7 @@
 *.code-workspace
 *.json
+*.jar
+*.crc
 
 load_data_gcs
 gcloud
@@ -13,5 +15,21 @@ upload-data.ipynb
 extra_notes.txt
 env
 .dlt
+
 1_data_eng_intro/**/*.csv
 2_workflow_orchestration/**/*.csv
+
+5_batch/SQL-Spark/data
+5_batch/SQL-Spark/zones
+5_batch/SQL-Spark/tmp
+5_batch/SQL-Spark/lib
+
+5_batch/homework/data
+5_batch/homework/fhv_data
+5_batch/homework/zones
+
+
+5_batch/*.csv
+5_batch/*.csv.gz
+5_batch/*.parquet
+5_batch/fhvhv
