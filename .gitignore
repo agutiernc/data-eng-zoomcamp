@@ -15,6 +15,7 @@ upload-data.ipynb
 extra_notes.txt
 env
 .dlt
+__pycache__
 
 1_data_eng_intro/**/*.csv
 2_workflow_orchestration/**/*.csv
@@ -33,3 +34,5 @@ env
 5_batch/*.csv.gz
 5_batch/*.parquet
 5_batch/fhvhv
+
+6_streaming/homework/*.csv

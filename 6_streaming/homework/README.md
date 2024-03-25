@@ -43,7 +43,11 @@ What's the version, based on the output of the command you executed? (copy the e
 
 **Answer**
 
+`v22.3.5 (rev 28b2443)`
 
+```bash
+docker exec redpanda-1 rpk version
+```
 
 ## Question 2. Creating a topic
 
@@ -56,6 +60,15 @@ Read the output of `help` and based on it, create a topic with name `test-topic`
 
 What's the output of the command for creating a topic? Include the entire output in your answer.
 
+**Answer**
+
+```bash
+docker exec redpanda-1 rpk topic create test-topic
+
+# output
+TOPIC       STATUS
+test-topic  OK
+```
 
 ## Question 3. Connecting to the Kafka server
 
@@ -96,6 +109,10 @@ producer.bootstrap_connected()
 Provided that you can connect to the server, what's the output
 of the last command?
 
+**Answer**
+
+`True`
+
 
 ## Question 4. Sending data to the stream
 
@@ -126,6 +143,9 @@ How much time did it take? Where did it spend most of the time?
 
 (Don't remove `time.sleep` when answering this question)
 
+**Answer**
+
+`0.51 seconds -- Sending the messages`
 
 ## Reading data with `rpk`
 
@@ -175,6 +195,8 @@ to `iterrows`
 * How much time in seconds did it take? (You can round it to a whole number)
 * Make sure you don't include sleeps in your code
 
+**Answer**
+`data sent in 59.07 seconds`
 
 ## Creating the PySpark consumer
 
