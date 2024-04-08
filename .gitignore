@@ -3,6 +3,8 @@
 *.jar
 *.crc
 
+temp
+
 load_data_gcs
 gcloud
 zoomcamp

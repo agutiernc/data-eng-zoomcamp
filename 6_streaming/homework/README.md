@@ -196,6 +196,7 @@ to `iterrows`
 * Make sure you don't include sleeps in your code
 
 **Answer**
+
 `data sent in 59.07 seconds`
 
 ## Creating the PySpark consumer
@@ -295,7 +296,22 @@ green_stream = green_stream \
   .select("data.*")
 ```
 
-How does the record look after parsing? Copy the output. 
+How does the record look after parsing? Copy the output.
+
+**Answer**
+
+```python
+Row(
+    lpep_pickup_datetime='2019-10-01 00:26:02',
+    lpep_dropoff_datetime='2019-10-01 00:39:58',
+    PULocationID=112,
+    DOLocationID=196,
+    passenger_count=1.0,
+    trip_distance=5.88,
+    tip_amount=0.0
+)
+
+```
 
 
 ### Question 7: Most popular destination
@@ -329,6 +345,22 @@ query.awaitTermination()
 ```
 
 Write the most popular destination, your answer should be *either* the zone ID or the zone name of this destination. (You will need to re-send the data for this to work)
+
+**Answer**
+
+`DOLocationID 74`
+
+```python
+# Adding timestamp column
+green_stream = green_stream.withColumn("timestamp", F.current_timestamp())
+
+# Group by 5 minutes window based on the timestamp column
+grouped_green_stream = green_stream \
+    .groupBy(F.window(F.col("timestamp"), "5 minutes"), F.col("DOLocationID")) \
+    .count() \
+    .orderBy(F.col("count").desc())
+
+```
 
 
 ## Submitting the solutions
